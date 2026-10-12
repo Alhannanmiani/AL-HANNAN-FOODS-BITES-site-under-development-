@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Hannan Foods & Bites — Website Under Development</title>
+  <meta name="description" content="Al Hannan Foods & Bites ki website under development hai. Abhi foran order karne ke liye WhatsApp +923435948603 par rabta karein.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #0c0a09;
+      color: #f5f5f4;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Glossy Ambient Glow Orbs */
+    .glow-orb-1 {
+      position: fixed;
+      top: 15%;
+      left: 20%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.22) 0%, rgba(217, 119, 6, 0) 70%);
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatSlow 10s ease-in-out infinite alternate;
+    }
+
+    .glow-orb-2 {
+      position: fixed;
+      bottom: 15%;
+      right: 20%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(37, 211, 102, 0.12) 0%, rgba(37, 211, 102, 0) 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatSlow 12s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, -20px) scale(1.08); }
+    }
+
+    /* Glossy Glassmorphic Card */
+    .glass-card {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 580px;
+      background: rgba(28, 25, 23, 0.6);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      box-shadow: 
+        0 30px 60px -12px rgba(0, 0, 0, 0.7),
+        0 18px 36px -18px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    /* Glossy Reflection Highlight */
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    }
+
+    /* Brand Logo / Glossy Badge */
+    .brand-icon-wrap {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.05) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 
+        0 8px 24px rgba(217, 119, 6, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    }
+
+    .brand-icon {
+      font-size: 1.85rem;
+      color: #f59e0b;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+
+    /* Brand Title */
+    .brand-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(180deg, #ffffff 30%, #e7e5e4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.35rem;
+    }
+
+    .brand-tagline {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #a8a29e;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Under Development Badge */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(217, 119, 6, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fbbf24;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #f59e0b;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+
+    /* Main Headings */
+    .main-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.15rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .sub-text {
+      font-size: 0.95rem;
+      color: #a8a29e;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Glossy WhatsApp Action Box */
+    .order-box {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 140, 126, 0.06) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    .order-label {
+      font-size: 0.8125rem;
+      color: #d1fae5;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: #25D366;
+      color: #0c0a09;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .whatsapp-btn:hover {
+      background: #2ee672;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+    }
+
+    .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Footer Copyright */
+    .footer-note {
+      margin-top: 1.75rem;
+      font-size: 0.75rem;
+      color: #78716c;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 640px) {
+      .glass-card {
+        padding: 2.25rem 1.25rem;
+        border-radius: 20px;
+      }
+      .main-heading {
+        font-size: 1.75rem;
+      }
+      .brand-name {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+
+  <!-- Glossy Center Card -->
+  <main class="glass-card">
+    <!-- Brand Icon -->
+    <div class="brand-icon-wrap">
+      <span class="brand-icon">&#10022;</span>
+    </div>
+
+    <!-- Store Name -->
+    <h1 class="brand-name">Al Hannan Foods &amp; Bites</h1>
+    <div class="brand-tagline">Fresh Bites &middot; Grill &middot; Sweets</div>
+
+    <!-- Status Badge -->
+    <div class="status-pill">
+      <span class="pulse-dot"></span>
+      <span>Website Under Development</span>
+    </div>
+
+    <!-- Heading in Roman Urdu -->
+    <h2 class="main-heading">
+      Website Par Kaam Jaari Hai
+    </h2>
+
+    <!-- Subtitle in Roman Urdu -->
+    <p class="sub-text">
+      Hamari official website bohat jald nayi look aur online system ke sath live honay wali hai.
+    </p>
+
+    <!-- WhatsApp Order Callout -->
+    <div class="order-box">
+      <span class="order-label">Abhi foran order karne ke liye WhatsApp par rabta karein:</span>
+      <a href="https://wa.me/923435948603?text=Salam!%20Mujhe%20Al%20Hannan%20Foods%20%26%20Bites%20se%20order%20karna%20hai." target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>+92 343 5948603</span>
+      </a>
+    </div>
+
+    <div class="footer-note">
+      &copy; 2026 Al Hannan Foods &amp; Bites &middot; All Rights Reserved
+    </div>
+  </main>
+
+  <div id="root" style="display:none;"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
